@@ -5,8 +5,9 @@ const fetchUser = (userId) => {
 
 const login = (userId, password) => {
   const user = fetchUser(userId);
-  if (password.length < 6) return false;
+  if (!password || password.length < 8) return false;
   return user !== null;
 };
 
 module.exports = { fetchUser, login };
+
