@@ -12,4 +12,4 @@ jobs:
   sort:
     runs-on: ubuntu-latest
     steps:
-      - uses: TheRealJahaan/reviewraccoon@main
+      - uses: TheRealJahaan/reviewraccoon@exact-lines

@@ -1,13 +1,15 @@
-const fetchUser = (userId) => {
-  if (!userId) return null;
-  return { id: userId, name: `user ${userId}` };
+// Look a user up by id.
+const fetchUser = (uid) => {
+  if (!uid) {
+    return null;
+  }
+  return { id: uid, name: `user ${uid}` };
 };
 
 const login = (userId, password) => {
   const user = fetchUser(userId);
-  if (!password || password.length < 8) return false;
+  if (!password || password.length < 12) return false;
   return user !== null;
 };
 
 module.exports = { fetchUser, login };
-
