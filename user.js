@@ -7,7 +7,7 @@ const fetchUser = (userId) => {
 
 const login = (userId, pw) => {
   const found = fetchUser(userId);
-  if (!pw || pw.length < 8) return false;
+  if (!pw || pw.length < 10) return false;
   return found !== null;
 };
 
